@@ -1,4 +1,4 @@
-'''
+"""
 Problem #3 [Medium]
 
 This problem was asked by Google.
@@ -16,7 +16,8 @@ The following test should pass:
 
 node = Node('root', Node('left', Node('left.left')), Node('right'))
 assert deserialize(serialize(node)).left.left.val == 'left.left'
-'''
+"""
+
 class Node:
     def __init__(self, val, left=None, right=None):
         self.val = val
@@ -28,7 +29,7 @@ class BinaryTree:
         self.root = None
 
 def serialize(root:Node) -> str:
-    if root == None:
+    if root is None:
         return "None,"
     
     return f"{root.val}," + serialize(root.left) + serialize(root.right)

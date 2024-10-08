@@ -1,4 +1,4 @@
-'''
+"""
 Problem #5 Medium
 
 
@@ -13,7 +13,8 @@ def cons(a, b):
         return f(a, b)
     return pair
 Implement car and cdr.
-'''
+"""
+
 def cons(a, b):
     def pair(f):
         return f(a, b)
