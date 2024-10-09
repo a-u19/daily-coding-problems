@@ -1,5 +1,5 @@
 """
-Problem #1 [Easy]
+Problem #1 - Google - Two Sum - Easy
 
 This problem was recently asked by Google.
 

@@ -1,6 +1,5 @@
 """
-Problem #5 Medium
-
+Problem #5 - Jane Street - CAR/CDR Pair - Hard
 
 This problem was asked by Jane Street.
 

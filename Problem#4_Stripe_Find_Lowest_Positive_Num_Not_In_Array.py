@@ -1,6 +1,5 @@
 """
-Problem #4 [Hard]
-
+Problem #4 - Stripe - Lowest Positive Number Not In the Array - Hard
 
 This problem was asked by Stripe.
 

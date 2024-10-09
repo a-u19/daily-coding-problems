@@ -1,4 +1,6 @@
 """
+# Problem 7 - Facebook - Encoded Message - Medium
+
 This problem was asked by Facebook.
 Given the mapping a = 1, b = 2, ... z = 26, and an encoded message, count the number of ways it can be decoded.
 For example, the message '111' would give 3, since it could be decoded as 'aaa', 'ka', and 'ak'.
@@ -13,14 +15,16 @@ You can assume that the messages are decodable. For example, '001' is not allowe
 
 import random
 
-def main(input_str:str):
+
+def main(input_str: str):
     res = 1
-    for i in range(len(input_str)-1):
-        if int(input_str[i:i+2]) < 27:
+    for i in range(len(input_str) - 1):
+        if int(input_str[i:i + 2]) < 27:
             # if two consecutive numbers are less than 27 then they can be interpreted as a different letter
             # print(input_str[i:i+2])
             res += 1
     return res
+
 
 if __name__ == '__main__':
     test1 = '111'
