@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Daily Coding Problems.iml" filepath="$PROJECT_DIR$/.idea/Daily Coding Problems.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../source_code/python-code/Retention/age_vs_retention/.idea/age_vs_retention.iml" filepath="$PROJECT_DIR$/../source_code/python-code/Retention/age_vs_retention/.idea/age_vs_retention.iml" />
     </modules>
   </component>
 </project>
