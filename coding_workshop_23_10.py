@@ -41,35 +41,35 @@ def main_n_numbers(target: int, nums: list, n: int) -> bool:
 testcase1 = [17, [9, 15, 3, 7]]
 testcase2 = [20, [10, 3, 5, 7]]
 testcase3 = [15, [1, 2, 3, 4, 5]]
-print(f"Test case: target = {testcase1[0]}, nums = {testcase1[1]} returns {main(testcase1[0], testcase1[1])}")
-print(f"Test case: target = {testcase2[0]}, nums = {testcase2[1]} returns {main(testcase2[0], testcase2[1])}")
-print(
-    f"Test case: target = {testcase2[0]}, nums = {testcase2[1]} returns {main_three_numbers(testcase2[0], testcase2[1])}")
-print(
-    f"Test case: target = {testcase3[0]}, nums = {testcase3[1]} returns {main_n_numbers(testcase3[0], testcase3[1], 4)}")
-
+# print(f"Test case: target = {testcase1[0]}, nums = {testcase1[1]} returns {main(testcase1[0], testcase1[1])}")
+# print(f"Test case: target = {testcase2[0]}, nums = {testcase2[1]} returns {main(testcase2[0], testcase2[1])}")
+# print(f"Test case: target = {testcase2[0]}, nums = {testcase2[1]} returns {main_three_numbers(testcase2[0], testcase2[1])}")
+# print(f"Test case: target = {testcase3[0]}, nums = {testcase3[1]} returns {main_n_numbers(testcase3[0], testcase3[1], 4)}")
 
 """
-Medium:
- 
+# Problem 11 - Twitter - Autocmplete System - Medium
+
 This problem was asked by Twitter.
- 
-Implement an autocomplete system. That is, given a query string s and a set of all possible query strings, return all strings in the set that have 's' as a prefix. 
- 
+
+Implement an autocomplete system. That is, given a query string s and a set of all possible query strings, return all strings in the set that have 's' as a prefix.
+
 For example, given the query string de and the set of strings [dog, deer, deal], return [deer, deal].
- 
+
 Hint: Try preprocessing the dictionary into a more efficient data structure to speed up queries.
 """
-def autocomplete(query_string:str, string_set:list) -> list:
+
+
+def autocomplete(query_string: str, string_set: list) -> list:
     autocomplete_dict = {}
     for each_str in string_set:
         for i in range(len(each_str) - 1):
-            if each_str[:i+1] in autocomplete_dict.keys():
-                autocomplete_dict[each_str[ :i+1]].append(each_str)
+            if each_str[:i + 1] in autocomplete_dict.keys():
+                autocomplete_dict[each_str[:i + 1]].append(each_str)
             else:
-                autocomplete_dict[each_str[ :i+1]] = [each_str]
-    # print(autocomplete_dict)
+                autocomplete_dict[each_str[:i + 1]] = [each_str]
+    print(autocomplete_dict)
     return autocomplete_dict[query_string]
+
 
 testcase1 = ["de", ["dog", "deer", "deal"]]
 testcase2 = ["app", ["apparently", "apple", "absolute", "appear"]]
