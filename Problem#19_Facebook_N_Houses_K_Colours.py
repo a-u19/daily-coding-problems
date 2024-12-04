@@ -11,9 +11,14 @@ def minCost(costs: list[list[int]]) -> int:
     for i in range(len(costs)):
         temp_dp = [0] * len(costs[0])
         for j in range(len(costs[i])):
-            temp_dp[j] = costs[i][j] + min(dp[:i] + dp[i:])
+            temp_dp[j] = costs[i][j] + min(dp[:j] + dp[j+1:])
         dp = temp_dp
+        print(dp)
 
     return min(dp)
 
-print(minCost([[17, 2, 17], [16, 16, 5], [14, 3, 19]]))
+print(minCost([[50, 60, 70],
+               [40, 30, 20],
+               [30, 40, 70],
+               [50, 30, 60],
+               [50, 1, 60]]))
